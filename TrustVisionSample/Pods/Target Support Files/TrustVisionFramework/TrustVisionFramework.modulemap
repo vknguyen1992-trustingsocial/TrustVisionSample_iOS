@@ -1,0 +1,6 @@
+framework module TrustVisionFramework {
+  umbrella header "TrustVisionFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}
