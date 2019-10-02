@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0C912CC7A1326A127E1A557DB7F5EDA9"
-               BuildableName = "TrustVisionFramework.framework"
+               BuildableName = "TrustVisionFramework"
                BlueprintName = "TrustVisionFramework"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

@@ -1,5 +1,5 @@
 PODS:
-  - TrustVisionFramework (1.0.0)
+  - TrustVisionFramework (1.0.2)
 
 DEPENDENCIES:
   - TrustVisionFramework
@@ -9,7 +9,7 @@ SPEC REPOS:
     - TrustVisionFramework
 
 SPEC CHECKSUMS:
-  TrustVisionFramework: d4fee5097e6e2cb651f0fbfa5e4276c42d36a69e
+  TrustVisionFramework: d2de8bf2b903d9c26a281e1745afb2ed5e6db148
 
 PODFILE CHECKSUM: b054b5dc435064974be8b7d246c006ff655a19fb
 
