@@ -1,6 +1,0 @@
-framework module Pods_TrustVisionSample {
-  umbrella header "Pods-TrustVisionSample-umbrella.h"
-
-  export *
-  module * { export * }
-}
