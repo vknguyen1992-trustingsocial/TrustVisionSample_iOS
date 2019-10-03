@@ -8,7 +8,7 @@ target 'TrustVisionSample' do
   use_frameworks!
 
   # Pods for TrustVisionSample
-  pod 'TrustVisionFramework'
+  pod 'TrustVisionSDKFramework'
 
   target 'TrustVisionSampleTests' do
     inherit! :search_paths
