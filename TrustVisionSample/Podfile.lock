@@ -1,7 +1,7 @@
 PODS:
-  - TrustVisionAPIFramework (1.0.0)
-  - TrustVisionSDKFramework (1.0.0):
-    - TrustVisionAPIFramework (~> 1.0.0)
+  - TrustVisionAPIFramework (1.0.1)
+  - TrustVisionSDKFramework (1.0.1):
+    - TrustVisionAPIFramework (~> 1.0.1)
 
 DEPENDENCIES:
   - TrustVisionSDKFramework
@@ -12,8 +12,8 @@ SPEC REPOS:
     - TrustVisionSDKFramework
 
 SPEC CHECKSUMS:
-  TrustVisionAPIFramework: 48584a7be2722eba9dbb513f0c923c8912026cfb
-  TrustVisionSDKFramework: 3bd9b90ef01ecab5ce74112760007e6e481900e3
+  TrustVisionAPIFramework: 51acd2cf95da724ede20faa4a0dab41f10350071
+  TrustVisionSDKFramework: 0dec39aa14d279a00aea6ff240a91d5bf4c3f915
 
 PODFILE CHECKSUM: e1216a5e27a1265300dff5746d4597ae35f08472
 

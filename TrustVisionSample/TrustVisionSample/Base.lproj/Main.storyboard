@@ -19,10 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhY-6X-B3P">
-                                <rect key="frame" x="191" y="260" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
+                                <rect key="frame" x="168" y="260" width="57" height="30"/>
+                                <state key="normal" title="Swift"/>
                                 <connections>
                                     <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R0t-R9-Daa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOI-nb-SD9">
+                                <rect key="frame" x="168" y="353" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Objective C"/>
+                                <connections>
+                                    <action selector="objcStartButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O5y-GZ-4hL"/>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hml-ia-h8o"/>
                                 </connections>
                             </button>
                         </subviews>

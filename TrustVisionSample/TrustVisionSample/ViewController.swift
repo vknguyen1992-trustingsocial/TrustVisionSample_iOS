@@ -16,9 +16,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func objcStartButtonPressed(_ sender: Any) {
+        FrameworkDemoObjC().startFlow(with: self);
+    }
+    
     @IBAction func startButtonPressed(_ sender: Any) {
-        
+
         // testing server - enable sanity
         let accessKeyId = "ddac2562-3bd0-41ef-93a4-e527fc167c5a"
         let accessKeySecret = "97dc8a54-8bb7-476f-8636-9c4d0c403c23"
@@ -33,7 +37,7 @@ class ViewController: UIViewController {
                     let cardTypes = try TrustVisionSdk.getCardTypes()
                     let config = TSFaceSDKConfig.defaultConfig()
                     config.isEnableSound = true
-                    config.livenessMode = TVLivenessOption.passive
+                    config.livenessMode = TVAPILivenessOption.passive
                     config.actionMode = TSFaceSDKConfig.ActionMode.faceMatching
                     config.cardType = cardTypes.first!
                     
