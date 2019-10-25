@@ -12,11 +12,6 @@ import TrustVisionAPI
 
 class ViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
     @IBAction func objcStartButtonPressed(_ sender: Any) {
         FrameworkDemoObjC().startFlow(with: self);
     }
@@ -35,10 +30,10 @@ class ViewController: UIViewController {
                 
                 do {
                     let cardTypes = try TrustVisionSdk.getCardTypes()
-                    let config = TSFaceSDKConfig.defaultConfig()
+                    let config = TVFaceSDKConfig.defaultConfig()
                     config.isEnableSound = true
-                    config.livenessMode = TVAPILivenessOption.passive
-                    config.actionMode = TSFaceSDKConfig.ActionMode.faceMatching
+                    config.livenessMode = TVLivenessOption.passive
+                    config.actionMode = TVFaceSDKConfig.ActionMode.faceMatching
                     config.cardType = cardTypes.first!
                     
                     DispatchQueue.main.async {
@@ -53,7 +48,12 @@ class ViewController: UIViewController {
         }
     }
     
-    func startFlow(config: TSFaceSDKConfig) {
+    func startFlow(config: TVFaceSDKConfig) {
+        
+        let captureImageVc = self.storyboard?.instantiateViewController(withIdentifier: "CaptureImageViewController") as! CaptureImageViewController
+        self.navigationController?.pushViewController(captureImageVc, animated: true)
+        
+        return;
         do {
             let vc = try TrustVisionSdk.newCameraViewController(
                 screenOrientation: UIApplication.shared.delegate as? TSScreenOrientationProtocol,
