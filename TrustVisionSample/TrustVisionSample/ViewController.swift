@@ -35,10 +35,10 @@ class ViewController: UIViewController {
                 
                 do {
                     let cardTypes = try TrustVisionSdk.getCardTypes()
-                    let config = TSFaceSDKConfig.defaultConfig()
+                    let config = TVSDKConfig.defaultConfig()
                     config.isEnableSound = true
-                    config.livenessMode = TVAPILivenessOption.passive
-                    config.actionMode = TSFaceSDKConfig.ActionMode.faceMatching
+                    config.livenessMode = TVLivenessOption.passive
+                    config.actionMode = TVSDKConfig.ActionMode.faceMatching
                     config.cardType = cardTypes.first!
                     
                     DispatchQueue.main.async {
@@ -53,10 +53,9 @@ class ViewController: UIViewController {
         }
     }
     
-    func startFlow(config: TSFaceSDKConfig) {
+    func startFlow(config: TVSDKConfig) {
         do {
             let vc = try TrustVisionSdk.newCameraViewController(
-                screenOrientation: UIApplication.shared.delegate as? TSScreenOrientationProtocol,
                 config: config
             ) {(result, error) in
                 if let result = result {

@@ -21,10 +21,10 @@
                                      isForced: true
                                       success: ^() {
          NSError *error;
-         NSArray<TSCardType *> *cardTypes = [TrustVisionSdk getCardTypesAndReturnError: &error];
-         TSFaceSDKConfig *config = [TSFaceSDKConfig defaultConfig];
+         NSArray<TVCardType *> *cardTypes = [TrustVisionSdk getCardTypesAndReturnError: &error];
+         TVSDKConfig *config = [TVSDKConfig defaultConfig];
          [config setIsEnableSound:true];
-         [config setLivenessMode:TVAPILivenessOptionPassive];
+         [config setLivenessMode:TVLivenessOptionPassive];
          [config setActionMode:ActionModeFaceMatching];
          [config setCardType:[cardTypes firstObject]];
          
@@ -32,17 +32,16 @@
              [self presentFlowWithConfig:config viewController:vc];
          });
      }
-     failure: ^(TSError *error) {
+     failure: ^(TVError *error) {
          
      }];
 }
 
-- (void)presentFlowWithConfig: (TSFaceSDKConfig *)config viewController: (UIViewController *)vc {
+- (void)presentFlowWithConfig: (TVSDKConfig *)config viewController: (UIViewController *)vc {
     NSError *error;
-    UIViewController *newVc = [TrustVisionSdk newCameraViewControllerWithScreenOrientation: (UIViewController <TSScreenOrientationProtocol> *) [[UIApplication sharedApplication] delegate]
-                                                          config:config
+    UIViewController *newVc = [TrustVisionSdk newCameraViewControllerWithConfig:config
                                                            error:&error
-                                                        callback:^(TVDetectionResult *result, TSError *error) {
+                                                        callback:^(TVDetectionResult *result, TVError *error) {
                                                             NSLog(@"[SDK ERROR] %@", [error description]);
                                                             NSLog(@"[SDK RESULT] %@", result);
                                                         }];

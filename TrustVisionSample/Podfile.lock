@@ -1,10 +1,10 @@
 PODS:
-  - TrustVisionAPIFramework (1.0.1)
-  - TrustVisionSDKFramework (1.0.1):
-    - TrustVisionAPIFramework (~> 1.0.1)
+  - TrustVisionAPIFramework (1.0.2)
+  - TrustVisionSDKFramework (1.0.2):
+    - TrustVisionAPIFramework (~> 1.0.2)
 
 DEPENDENCIES:
-  - TrustVisionSDKFramework
+  - TrustVisionSDKFramework (= 1.0.2)
 
 SPEC REPOS:
   https://github.com/tsocial/TrustVisionPodspec:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - TrustVisionSDKFramework
 
 SPEC CHECKSUMS:
-  TrustVisionAPIFramework: 51acd2cf95da724ede20faa4a0dab41f10350071
-  TrustVisionSDKFramework: 0dec39aa14d279a00aea6ff240a91d5bf4c3f915
+  TrustVisionAPIFramework: 11d2768b9bb4826e12b6a1d74889ac5563dda6e2
+  TrustVisionSDKFramework: c6e4eed5cfa727e55926facbe6b2907b9c4a0113
 
-PODFILE CHECKSUM: e1216a5e27a1265300dff5746d4597ae35f08472
+PODFILE CHECKSUM: cf03236cc7d320a3de38bcb206ccc4f5e936d00b
 
 COCOAPODS: 1.6.1

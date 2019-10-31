@@ -7,48 +7,12 @@
 //
 
 import UIKit
-import TrustVisionSDK
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, TSScreenOrientationProtocol {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var orientationLock = UIInterfaceOrientationMask.portrait
-    
-    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        return self.orientationLock
-    }
-    
-    func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
-        self.orientationLock = orientation
-    }
-    
-    func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
-        self.lockOrientation(orientation)
-        UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
-        UINavigationController.attemptRotationToDeviceOrientation()
-    }
-    
-    func tsLockScreenOrientation(_ rotateOrientation: UIInterfaceOrientation) {
-        var orientation: UIInterfaceOrientationMask
-        switch rotateOrientation {
-        case .landscapeLeft:
-            orientation = .landscapeLeft
-        case .landscapeRight:
-            orientation = .landscapeRight
-        case .portrait:
-            orientation = .portrait
-        case .portraitUpsideDown:
-            orientation = .portraitUpsideDown
-        case .unknown:
-            orientation = .portrait
-        @unknown default:
-            orientation = .portrait
-        }
-        self.lockOrientation(orientation, andRotateTo: rotateOrientation)
-    }
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
